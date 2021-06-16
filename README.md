@@ -1,6 +1,6 @@
 # yandex-map
 Компонент для яндекс карт
-# <div align="center">@63pokupki/yandexmap<div>
+# <div align="center">@63pokupki/yandex-map<div>
 
 ## Installation
 Install with npm:

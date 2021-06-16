@@ -1,4 +1,4 @@
-import YandexMap from "./component/yandex_map.vue";
+import YandexMap from "./component/YandexMap.vue";
 
 export {
     YandexMap

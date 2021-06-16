@@ -9,6 +9,10 @@
     "url": "git+https://github.com/63pokupki/yandex-map.git"
   },
   "homepage": "https://github.com/63pokupki/yandex-map#readme",
+  "main": "dist/component.umd.min.js",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "vue-cli-service build --target lib --name component src/index.js",
     "dev-build": "vue-cli-service build --watch --mode development --no-clean"

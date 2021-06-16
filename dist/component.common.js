@@ -180,7 +180,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 __webpack_require__.r(__webpack_exports__);
 
 // EXPORTS
-__webpack_require__.d(__webpack_exports__, "YandexMap", function() { return /* reexport */ yandex_map; });
+__webpack_require__.d(__webpack_exports__, "YandexMap", function() { return /* reexport */ YandexMap; });
 
 // CONCATENATED MODULE: ./node_modules/@vue/cli-service/lib/commands/build/setPublicPath.js
 // This file is imported into lib/wc client bundles.
@@ -206,21 +206,21 @@ if (typeof window !== 'undefined') {
 // Indicate to webpack that this file can be concatenated
 /* harmony default export */ var setPublicPath = (null);
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"22524fcc-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/component/yandex_map.vue?vue&type=template&id=aa05f556&
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"53dfd514-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/component/YandexMap.vue?vue&type=template&id=7ff7457e&
 var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticStyle:{"width":"100%","height":"100%"},attrs:{"id":_vm.mapId}})}
 var staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/component/yandex_map.vue?vue&type=template&id=aa05f556&
+// CONCATENATED MODULE: ./src/component/YandexMap.vue?vue&type=template&id=7ff7457e&
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/component/yandex_map.vue?vue&type=script&lang=js&
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/component/YandexMap.vue?vue&type=script&lang=js&
 //
 //
 //
 //
 
 
-/* harmony default export */ var yandex_mapvue_type_script_lang_js_ = ({
+/* harmony default export */ var YandexMapvue_type_script_lang_js_ = ({
     name: 'YandexMap',
     props : {
         markers: {
@@ -356,8 +356,8 @@ var staticRenderFns = []
 
 });
 
-// CONCATENATED MODULE: ./src/component/yandex_map.vue?vue&type=script&lang=js&
- /* harmony default export */ var component_yandex_mapvue_type_script_lang_js_ = (yandex_mapvue_type_script_lang_js_); 
+// CONCATENATED MODULE: ./src/component/YandexMap.vue?vue&type=script&lang=js&
+ /* harmony default export */ var component_YandexMapvue_type_script_lang_js_ = (YandexMapvue_type_script_lang_js_); 
 // CONCATENATED MODULE: ./node_modules/vue-loader/lib/runtime/componentNormalizer.js
 /* globals __VUE_SSR_CONTEXT__ */
 
@@ -458,7 +458,7 @@ function normalizeComponent (
   }
 }
 
-// CONCATENATED MODULE: ./src/component/yandex_map.vue
+// CONCATENATED MODULE: ./src/component/YandexMap.vue
 
 
 
@@ -467,7 +467,7 @@ function normalizeComponent (
 /* normalize component */
 
 var component = normalizeComponent(
-  component_yandex_mapvue_type_script_lang_js_,
+  component_YandexMapvue_type_script_lang_js_,
   render,
   staticRenderFns,
   false,
@@ -477,7 +477,7 @@ var component = normalizeComponent(
   
 )
 
-/* harmony default export */ var yandex_map = (component.exports);
+/* harmony default export */ var YandexMap = (component.exports);
 // CONCATENATED MODULE: ./src/index.js
 
 
