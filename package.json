@@ -1,0 +1,24 @@
+{
+  "name": "@63pokupki/yandex-map",
+  "version": "0.0.1",
+  "author": "63pokupki",
+  "license": "BSD-3-Clause",
+  "private": false,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/63pokupki/yandex-map.git"
+  },
+  "homepage": "https://github.com/63pokupki/yandex-map#readme",
+  "scripts": {
+    "build": "vue-cli-service build --target lib --name component src/index.js",
+    "dev-build": "vue-cli-service build --watch --mode development --no-clean"
+  },
+  "dependencies": {
+    "vue": "^2.6.12"
+  },
+  "devDependencies": {
+    "@vue/cli-service": "^4.5.13",
+    "vue-loader": "^15.9.7",
+    "vue-template-compiler": "^2.6.14"
+  }
+}
