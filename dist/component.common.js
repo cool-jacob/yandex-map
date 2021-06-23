@@ -206,12 +206,12 @@ if (typeof window !== 'undefined') {
 // Indicate to webpack that this file can be concatenated
 /* harmony default export */ var setPublicPath = (null);
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"53dfd514-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/component/YandexMap.vue?vue&type=template&id=7ff7457e&
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"306e6b8e-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/component/YandexMap.vue?vue&type=template&id=0505c617&
 var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticStyle:{"width":"100%","height":"100%"},attrs:{"id":_vm.mapId}})}
 var staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/component/YandexMap.vue?vue&type=template&id=7ff7457e&
+// CONCATENATED MODULE: ./src/component/YandexMap.vue?vue&type=template&id=0505c617&
 
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/component/YandexMap.vue?vue&type=script&lang=js&
 //
@@ -289,6 +289,7 @@ var staticRenderFns = []
 
         // Установка маркеров на карте
         setMarkers() {
+            this.map.geoObjects.removeAll();
              this.objectManager = new ymaps.ObjectManager({
             // Чтобы метки начали кластеризоваться, выставляем опцию.
             clusterize: true,
@@ -350,8 +351,17 @@ var staticRenderFns = []
             this.$emit("Search", param);
         }
     },
+    watch: {
+        coordsCenter: function() {
+            if (this.coordsCenter && this.map) {
+                this.map.setCenter(this.coordsCenter);
+                this.setMarkers();
+            }
+        },
+    },
     beforeDestroy() {
-        if (this.map.geoObjects) this.map.geoObjects.removeAll();
+        if (this.map.geoObjects.length) this.map.geoObjects.removeAll();
+
     },
 
 });

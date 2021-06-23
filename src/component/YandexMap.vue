@@ -73,6 +73,7 @@ export default {
 
         // Установка маркеров на карте
         setMarkers() {
+            this.map.geoObjects.removeAll();
              this.objectManager = new ymaps.ObjectManager({
             // Чтобы метки начали кластеризоваться, выставляем опцию.
             clusterize: true,
@@ -134,8 +135,17 @@ export default {
             this.$emit("Search", param);
         }
     },
+    watch: {
+        coordsCenter: function() {
+            if (this.coordsCenter && this.map) {
+                this.map.setCenter(this.coordsCenter);
+                this.setMarkers();
+            }
+        },
+    },
     beforeDestroy() {
-        if (this.map.geoObjects) this.map.geoObjects.removeAll();
+        if (this.map.geoObjects.length) this.map.geoObjects.removeAll();
+
     },
 
 }
