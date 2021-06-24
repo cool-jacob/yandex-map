@@ -215,12 +215,12 @@ if (typeof window !== 'undefined') {
 // Indicate to webpack that this file can be concatenated
 /* harmony default export */ var setPublicPath = (null);
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"306e6b8e-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/component/YandexMap.vue?vue&type=template&id=0505c617&
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"0464e308-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/component/YandexMap.vue?vue&type=template&id=808f83fa&
 var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticStyle:{"width":"100%","height":"100%"},attrs:{"id":_vm.mapId}})}
 var staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/component/YandexMap.vue?vue&type=template&id=0505c617&
+// CONCATENATED MODULE: ./src/component/YandexMap.vue?vue&type=template&id=808f83fa&
 
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/component/YandexMap.vue?vue&type=script&lang=js&
 //
@@ -243,6 +243,10 @@ var staticRenderFns = []
         apiKey: {
             type: String,
             default: ''
+        },
+        oneMarkerCoords: {
+            type: Array,
+            default: null
         }
     },
     data() {
@@ -289,6 +293,10 @@ var staticRenderFns = []
                         noPlacemark: false
                     }
                 });
+                if(this.oneMarkerCoords) {
+                    this.oneMarker = new ymaps.Placemark(this.oneMarkerCoords);
+                    this.map.geoObjects.add( this.oneMarker);
+                }
                 this.map.controls.add(this.searchControl);
                 this.searchControl.events.add('resultselect', this.Search);
             } 
@@ -341,7 +349,7 @@ var staticRenderFns = []
         // Событие клика по карте
         onClickMap(e) {
             let coords = e.get('coords');
-            if (this.oneMarker) this.map.geoObjects.remove(this.oneMarker);
+            this.map.geoObjects.removeAll();
             this.oneMarker = new ymaps.Placemark(coords);
             this.map.geoObjects.add( this.oneMarker);
             this.$emit("ClickMap", coords);
@@ -350,6 +358,7 @@ var staticRenderFns = []
 
         // Событие выбора результата поиска
         Search(e) {
+            if (this.oneMarker) this.map.geoObjects.remove(this.oneMarker);
             const resultList = this.searchControl.getResultsArray();
             const index = this.searchControl.getSelectedIndex();
             const result = resultList[index].properties.get('metaDataProperty.GeocoderMetaData');

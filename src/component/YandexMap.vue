@@ -18,6 +18,10 @@ export default {
         apiKey: {
             type: String,
             default: ''
+        },
+        oneMarkerCoords: {
+            type: Array,
+            default: null
         }
     },
     data() {
@@ -64,6 +68,10 @@ export default {
                         noPlacemark: false
                     }
                 });
+                if(this.oneMarkerCoords) {
+                    this.oneMarker = new ymaps.Placemark(this.oneMarkerCoords);
+                    this.map.geoObjects.add( this.oneMarker);
+                }
                 this.map.controls.add(this.searchControl);
                 this.searchControl.events.add('resultselect', this.Search);
             } 
@@ -116,7 +124,7 @@ export default {
         // Событие клика по карте
         onClickMap(e) {
             let coords = e.get('coords');
-            if (this.oneMarker) this.map.geoObjects.remove(this.oneMarker);
+            this.map.geoObjects.removeAll();
             this.oneMarker = new ymaps.Placemark(coords);
             this.map.geoObjects.add( this.oneMarker);
             this.$emit("ClickMap", coords);
@@ -125,6 +133,7 @@ export default {
 
         // Событие выбора результата поиска
         Search(e) {
+            if (this.oneMarker) this.map.geoObjects.remove(this.oneMarker);
             const resultList = this.searchControl.getResultsArray();
             const index = this.searchControl.getSelectedIndex();
             const result = resultList[index].properties.get('metaDataProperty.GeocoderMetaData');
