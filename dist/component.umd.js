@@ -107,13 +107,6 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ }),
 
-/***/ "4888":
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "img/map-point.d6387ad7.svg";
-
-/***/ }),
-
 /***/ "8875":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -192,6 +185,13 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 
 /***/ }),
 
+/***/ "b1d1":
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "img/map-point.d6387ad7.svg";
+
+/***/ }),
+
 /***/ "d345":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -233,7 +233,7 @@ if (typeof window !== 'undefined') {
 
 // Indicate to webpack that this file can be concatenated
 /* harmony default export */ var setPublicPath = (null);
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"2a9589f8-vue-loader-template"}!./node_modules/@vue/cli-service/node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/dist??vue-loader-options!./src/component/YandexMap.vue?vue&type=template&id=75a1265d&scoped=true
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"8d4a11f6-vue-loader-template"}!./node_modules/@vue/cli-service/node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/dist??vue-loader-options!./src/component/YandexMap.vue?vue&type=template&id=75a1265d&scoped=true
 var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"ymap-wrapper__custom"},[_c('div',{staticStyle:{"width":"100%","height":"100%"},attrs:{"id":_vm.mapId}})])}
 var staticRenderFns = []
 
@@ -482,7 +482,7 @@ var YMapsObjects = /*#__PURE__*/function () {
         // Опции для кастомной иконки одиночной метки
         geoObjectIconLayout: 'default#image',
         // Своё изображение иконки метки.
-        geoObjectIconImageHref: __webpack_require__("4888"),
+        geoObjectIconImageHref: __webpack_require__("b1d1"),
         // Размеры метки.
         geoObjectIconImageSize: [50, 50],
         // Смещение левого верхнего угла иконки относительно её "ножки" (точки привязки).
@@ -490,7 +490,7 @@ var YMapsObjects = /*#__PURE__*/function () {
         // Опции для кастомной иконки кластера
         clusterIconLayout: 'default#image',
         // Своё изображение иконки метки.
-        clusterIconImageHref: __webpack_require__("4888"),
+        clusterIconImageHref: __webpack_require__("b1d1"),
         // Размеры метки.
         clusterIconImageSize: [70, 70],
         // Смещение левого верхнего угла иконки относительно

@@ -19,7 +19,7 @@ export class YMapsObjects {
             // Опции для кастомной иконки одиночной метки
             geoObjectIconLayout: 'default#image',
             // Своё изображение иконки метки.
-            geoObjectIconImageHref: require('@/assets/images/map-point.svg'),
+            geoObjectIconImageHref: require('./img/map-point.svg'),
             // Размеры метки.
             geoObjectIconImageSize: [50, 50],
             // Смещение левого верхнего угла иконки относительно её "ножки" (точки привязки).
@@ -27,7 +27,7 @@ export class YMapsObjects {
             // Опции для кастомной иконки кластера
             clusterIconLayout: 'default#image',
             // Своё изображение иконки метки.
-            clusterIconImageHref: require('@/assets/images/map-point.svg'),
+            clusterIconImageHref: require('./img/map-point.svg'),
             // Размеры метки.
             clusterIconImageSize: [70, 70],
             // Смещение левого верхнего угла иконки относительно
